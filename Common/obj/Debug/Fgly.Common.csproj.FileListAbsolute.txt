@@ -1,0 +1,11 @@
+E:\ProJect\FKAppWeb\Fgly.Common\bin\Debug\Fgly.Common.dll
+E:\ProJect\FKAppWeb\Fgly.Common\bin\Debug\Fgly.Common.pdb
+E:\ProJect\FKAppWeb\Fgly.Common\bin\Debug\zxing.dll
+E:\ProJect\FKAppWeb\Fgly.Common\obj\Debug\Fgly.Common.dll
+E:\ProJect\FKAppWeb\Fgly.Common\obj\Debug\Fgly.Common.pdb
+E:\ProJect\FKAppWeb\Fgly.Common\obj\Debug\Fgly.Common.csprojResolveAssemblyReference.cache
+E:\SignJect\TianHui\TianHuiWeb\Common\bin\Debug\Fgly.Common.dll
+E:\SignJect\TianHui\TianHuiWeb\Common\bin\Debug\Fgly.Common.pdb
+E:\SignJect\TianHui\TianHuiWeb\Common\obj\Debug\Fgly.Common.csprojResolveAssemblyReference.cache
+E:\SignJect\TianHui\TianHuiWeb\Common\obj\Debug\Fgly.Common.dll
+E:\SignJect\TianHui\TianHuiWeb\Common\obj\Debug\Fgly.Common.pdb

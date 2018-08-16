@@ -1,0 +1,6 @@
+E:\ProJect\FKAppWeb\Fgly.Common\bin\Release\Fgly.Common.dll
+E:\ProJect\FKAppWeb\Fgly.Common\bin\Release\Fgly.Common.pdb
+E:\ProJect\FKAppWeb\Fgly.Common\bin\Release\zxing.dll
+E:\ProJect\FKAppWeb\Fgly.Common\obj\Release\Fgly.Common.dll
+E:\ProJect\FKAppWeb\Fgly.Common\obj\Release\Fgly.Common.pdb
+E:\ProJect\FKAppWeb\Fgly.Common\obj\Release\Fgly.Common.csprojResolveAssemblyReference.cache

@@ -1,0 +1,5 @@
+E:\SignJect\TianHui\TianHuiWeb\Model\bin\Debug\Model.dll
+E:\SignJect\TianHui\TianHuiWeb\Model\bin\Debug\Model.pdb
+E:\SignJect\TianHui\TianHuiWeb\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+E:\SignJect\TianHui\TianHuiWeb\Model\obj\Debug\Model.dll
+E:\SignJect\TianHui\TianHuiWeb\Model\obj\Debug\Model.pdb
