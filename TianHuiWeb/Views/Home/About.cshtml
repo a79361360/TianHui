@@ -1,7 +1,168 @@
-﻿@{
-    ViewBag.Title = "About";
-}
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+﻿
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta name="format-detection" content="telephone=no">
+    <title>天汇集团</title>
+    <meta name="description" content="asdfasd">
+    <link rel="stylesheet" href="../assets/static/css/default.css?v=142">
+    <script src="../assets/static/js/jquery-1.11.1.min.js"></script>
+    <script src="../assets/static/js/fun.js?v=141"></script>
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="../assets/static/js/respond.min.js"></script>
+    <script type="text/javascript" src="../assets/static/js/html5shiv.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="../assets/static/css/zi.css">
+    <link rel="stylesheet" href="../assets/static/css/swiper-3.3.1.min.css">
 
-<p>Use this area to provide additional information.</p>
+    <style>
+        .banner {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- top start -->
+    @Html.Action("HomePartial", "Home", new { chanelid = 49 })
+    <!-- end top -->
+    <div class="container">
+        <div class="banner">
+            @Html.Raw(ViewBag.banner)
+        </div>
+        <div class="all main">
+            <div class="title">@Html.Raw(ViewBag.title)</div><br />
+            @Html.Raw(ViewBag.Content)
+        </div>
+        <br />
+    </div>
+    <!-- foot start -->
+    @Html.Partial("~/Views/Shared/Foot.cshtml")
+    <!-- end foot -->
+    <script type="text/javascript" src="../assets/static/js/easing.js"></script>
+    <script src="../assets/static/js/swiper-3.3.1.min.js"></script>
+    <script type="text/javascript">
+    $(function(){
+        var height=scrollTop=liTop=0;
+        windowScroll();
+        $(window).scroll(windowScroll);
+        function windowScroll(){
+            height=$(window).height();
+            scrollTop=$(window).scrollTop();
+            $('.list li').each(function(i){
+                if(!$(this).hasClass('cur')){
+                    liTop=$(this).offset().top;
+                    if(scrollTop+height-liTop>150){
+                        $(this).addClass('cur');
+                        $(this).children('i').fadeIn().next().delay('100').animate({'left':'0'}, '500', 'easeOutCirc');
+                    }
+                }
+            })
+        }
+
+        var history = $('.history'),
+            cont = history.find('.cont'),
+            prev = history.find('.slide-prev'),
+            next = history.find('.slide-next'),
+            slidecont = history.find('.slide-cont'),
+            slidelist = history.find('.slide-list'),
+            aItem = slidelist.find('.slide-item');
+
+        var liW = cont.width(),
+            time = 200,
+            statue = true;
+
+        slidelist.width(liW * aItem.length);
+
+        if($(window).width() <= 680){
+            setTimeout(function(){
+                for(var i = 0; i < aItem.length; i++){
+                    //aItem.eq(i).height(itemH);
+                    aItem.eq(i).width(liW);
+                }
+                var itemH = aItem.eq(0).find('img').height();
+                slidelist.height(itemH);
+                slidecont.height(itemH);
+                cont.height(itemH);
+            }, 20);
+        }
+
+        prev.click(function(){
+            if(statue == true){
+                statue = false;
+                setTimeout(function(){
+                    statue = true;
+                }, time);
+                var left = parseInt(slidelist.css('left'));
+
+                if(left == 0){
+                    return false;
+                }
+                slidelist.css({
+                    left : left + liW + 'px',
+                })
+            }
+            else{
+                return false;
+            }
+        });
+        next.click(function(){
+            if(statue == true){
+                statue = false;
+                setTimeout(function(){
+                    statue = true;
+                }, time);
+                var left = parseInt(slidelist.css('left'));
+
+                if((liW - left) == slidelist.width()){
+                    return false;
+                }
+                slidelist.css({
+                    left : left - liW + 'px',
+                })
+            }
+            else{
+                return false;
+            }
+        });
+
+        $('.banner').click(function(){
+            if($(this).attr('data-video') == 'true'){
+                $('.ui-mask').show();
+                $('.xbox-video').show();
+                $('.xbox-video video').attr('src', $('.banner').attr('data-src'));
+            }
+        });
+        $('.ui-mask').click(function(){
+            $('.ui-mask').hide();
+            $('.xbox-video').hide();
+            $('.xbox-video video').attr('src', '');
+			$('.banner .video video').attr('src', '');
+			$('.banner .video video source').attr('src', '');
+        });
+
+        if($(window).width() > 510){
+            if($('.banner').attr('data-video') == 'true'){
+                $('.ui-mask').show();
+                $('.xbox-video').show();
+                $('.xbox-video video').attr('src', $('.banner').attr('data-src'));
+            }
+        }
+
+    });
+
+    //swiper插件初始化
+    var mySwiper = new Swiper('.swiper-content',{
+        loop:true,
+        autoplay:3000,
+        prevButton:'.slide-prev',
+        nextButton:'.slide-next',
+    });
+
+    </script>
+
+</body>
+</html>

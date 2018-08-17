@@ -3,3 +3,211 @@
 }
 
 @Html.Raw(ViewBag.str)
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta name="format-detection" content="telephone=no">
+    <title>天汇传媒</title>
+    <link rel="stylesheet" href="../assets/static/css/default.css?v=142">
+    <script src="../assets/static/js/jquery-1.11.1.min.js"></script>
+    <script src="../assets/static/js/fun.js?v=141"></script>
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="../assets/static/js/respond.min.js"></script>
+    <script type="text/javascript" src="../assets/static/js/html5shiv.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="../assets/static/css/idangerous.swiper.css" />
+    <link rel="stylesheet" href="../assets/static/css/index.css">
+</head>
+<body>
+    <!-- top start -->
+    @Html.Action("HomePartial", "Home", new { chanelid = 1 })
+    @*<header class="header">
+        <div class="head">
+            <h2></h2>
+
+            <div class="logo">
+                <a href="/"><img src="../assets/static/images/logo.png" alt=""></a>
+            </div>
+            <!--<div class="lang"><a class="cur" href="/">中文</a><a href="/en">English</a></div>-->
+            <div class="share">
+                <a class="wx" href="javascript:void(0);">
+                    <span><img src="../assets/static/images/code.png" alt=""></span>
+                </a>
+                <a class="wb" href="http://weibo.com/u/2476922652" target="_blank"></a>
+            </div>
+            <div class="menu-btn"><i></i></div>
+            <menu class="menu" id="menu">
+                <!--<div class="mobile-lang"><a href="/en">English</a></div>-->
+                <ul>
+                    @Html.Raw(ViewBag.Home1)
+                    <li class="cur"><a href="/">首页</a></li>
+                    <li><a href="/about" target="_self">天汇传媒</a></li>
+                    <li>
+                        <a href="/business" target="_self">产品与服务</a>
+                        <dl>
+                            <dd><a href="/business">公交广告</a></dd>
+                            <dd><a href="/elevator">灯箱广告</a></dd>
+                            <dd><a href="/screen">活动推广</a></dd>
+                            <dd><a href="/store">户外大牌</a></dd>
+                            <dd><a href="/store">天汇视频机</a></dd>
+                        </dl>
+                    </li>
+                    <li><a href="/cases" target="_self">案例中心</a></li>
+                    <li><a href="/honor" target="_self">天汇荣誉</a></li>
+                    <li><a href="/join" target="_self">加入天汇</a></li>
+                    <li><a href="/contactus" target="_self">联系我们</a></li>
+                </ul>
+            </menu>
+        </div>
+        <div class="maskm"></div>
+    </header>*@
+    <!-- end top -->
+    <div class="main">
+        <div class="banner">
+            <div class="codema"><img src=""></div>
+            <div class="mcodema"><img src=""></div>
+            <div class="imgs">
+                <ul>
+                    @Html.Raw(ViewBag.Home2)
+                    @*<li class="pc-banner1">
+                        <a href="/" target="_blank">
+                            <img src="../assets/static/images/index/bannera1.jpg" width="1920" height="665" alt="">
+                        </a>
+                    </li>
+                    <li class="pc-banner1">
+                        <a href="/" target="_blank">
+                            <img src="../assets/static/images/index/bannerb1.jpg" width="1920" height="665" alt="">
+                        </a>
+                    </li>
+                    <li class="pc-banner1">
+                        <a href="/" target="_blank">
+                            <img src="../assets/static/images/index/bannerc1.jpg" width="1920" height="665" alt="">
+                        </a>
+                    </li>
+                    <li class="pc-banner1">
+                        <a href="/" target="_blank">
+                            <img src="../assets/static/images/index/bannerd1.jpg" width="1920" height="665" alt="">
+                        </a>
+                    </li>
+                    <li class="pc-banner1">
+                        <a href="/" target="_blank">
+                            <img src="../assets/static/images/index/bannerd1.jpg" width="1920" height="665" alt="">
+                        </a>
+                    </li>*@
+                </ul>
+                <div class="arrow-left"></div>
+                <div class="arrow-right"></div>
+                <div class="pagina"></div>
+            </div>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    @Html.Raw(ViewBag.Home21)
+                    @*<div class="swiper-slide" style="max-width: 500px;">
+                        <a href=""><img src="../assets/static/images/index/bannera1m.jpg" style="width:100%; height:100%; "></a>
+                    </div>
+                    <div class="swiper-slide" style="max-width: 500px;">
+                        <a href=""><img src="../assets/static/images/index/bannerb1m.jpg" style="width:100%; height:100%; "></a>
+                    </div>
+                    <div class="swiper-slide" style="max-width: 500px;">
+                        <a href=""><img src="../assets/static/images/index/bannerc1m.jpg" style="width:100%; height:100%; "></a>
+                    </div>
+                    <div class="swiper-slide" style="max-width: 500px;">
+                        <a href=""><img src="../assets/static/images/index/bannerd1m.jpg" style="width:100%; height:100%; "></a>
+                    </div>*@
+                </div>
+                <div class="pagination"></div>
+            </div>
+        </div>
+
+        <div class="wrap">
+            <ul class="clearboth">@Html.Raw(ViewBag.Home3)
+                @*<li>
+                    <a href="/business">
+                        <img src="../assets/static/images/index/01.jpg" width="468" height="226" alt="">
+                        <div class="maskw"></div>
+                        <div class="text">
+                            <h3><span>天汇公交广告</span></h3>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="/elevator">
+                        <img src="../assets/static/images/index/02.jpg" width="468" height="226" alt="">
+                        <div class="maskw"></div>
+                        <div class="text">
+                            <h3><span>天汇灯箱广告</span></h3>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="/screen">
+                        <img src="../assets/static/images/index/04.jpg" width="468" height="226" alt="">
+                        <div class="maskw"></div>
+                        <div class="text">
+                            <h3><span>天汇活动推广</span></h3>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="/store">
+                        <img src="../assets/static/images/index/03.jpg" width="468" height="226" alt="">
+                        <div class="maskw"></div>
+                        <div class="text">
+                            <h3><span>天汇户外大牌</span></h3>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="/store">
+                        <img src="../assets/static/images/index/03.jpg" width="468" height="226" alt="">
+                        <div class="maskw"></div>
+                        <div class="text">
+                            <h3><span>天汇户外大牌</span></h3>
+                        </div>
+                    </a>
+                </li>*@
+            </ul>
+        </div>
+    </div>
+    <!-- foot start -->
+    @*<footer class="footer">
+        <div class="foot">
+            <div class="foot-nav"><a href="/contactus">联系我们</a>|<a href="/join">加入天汇</a></div>
+            <div class="copy">Copyright(C) 2005   Focus Media Holding Ltd.   All Rights Reserved  <a href="http://www.miitbeian.gov.cn/state/outPortal/loginPortal.action">沪ICP备11049649号-1</a></div>
+        </div>
+    </footer>*@
+    @Html.Partial("~/Views/Shared/Foot.cshtml")
+    <!-- end foot -->
+    <script src="../assets/static/js/idangerous.swiper.min.js"></script>
+    <script>
+    $(function(){
+        var pc=false, mob=false;
+        home();
+        $(window).resize(function(){
+            home();
+        });
+        function home(){
+            if($(window).width()>800){
+                if(!pc){
+                    pc=true;
+                    init.pc();
+                }
+            }else{
+                var _w=$(window).width();
+                var h=_w*320/640;
+                $('.swiper-container').height(h);
+                if(!mob){
+                    mob=true;
+                    init.mobile();
+                }
+            }
+        }
+    });
+    </script>
+</body>
+</html>

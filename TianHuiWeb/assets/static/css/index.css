@@ -1,0 +1,107 @@
+.head >h2{ display:none; }
+.footer{ position:absolute; z-index:1000; bottom:0; left:0; }
+
+.main{ position:absolute; top:78px; left:0; bottom:50px; width:100%; }
+.banner{ position:absolute; top:0; left:0; width:100%; height:72%; background:#eee; }
+.banner .imgs,.banner .imgs ul{ position:relative; width:100%; height:100%; overflow:hidden; }
+.banner .codema {position: absolute; z-index: 1;bottom: 20px;right: 20px;text-align: right;}
+.banner .mcodema {display:none;}
+.banner .imgs ul li{ display:none; position:absolute; width:100%; height:100%; }
+.banner .imgs ul li a{ display:block;position: relative;}
+.banner .imgs ul li .zz{ position:absolute; top:0; left:0; width:100%; height:100%; background:#000; opacity:0.2; filter:alpha(opacity=20); }
+.banner .imgs ul li .text{ position:absolute; top:40%; left:10%; width:80%; text-align:center; font-size:32px; font-weight:300; color:#fff; }
+.banner .imgs ul li .text{ top:auto; bottom:150px; left:0; width:100%; text-align:left; line-height: 180%;}
+.banner .imgs ul li .text > div{ width:90%; max-width:1360px; margin:0 auto; font-size:32px; font-weight:300; color:#fff; }
+.banner .txt1,.banner .txt2{
+	position: absolute;
+	top:0;
+	left:0;
+	display: block;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	opacity: 1;
+	-webkit-transition-delay:2.25s;
+	-moz-transition-delay:2.25s;
+	-ms-transition-delay:2.25s;
+	-o-transition-delay:2.25s;
+	transition-delay:2.25s;
+}
+@media screen and (max-width: 1366px) {
+	.banner .imgs ul li .text{
+		bottom: 83px;
+		left: 29px;
+	}
+}
+.banner .swiper-slide .txt1,.banner .swiper-slide .txt2{
+	-webkit-transition:none;
+	-moz-transition:none;
+	-ms-transition:none;
+	-o-transition:none;
+	transition:none;
+}
+.banner .txt2{
+	opacity: 0;
+}
+.banner .cur .txt1,.banner .swiper-slide-active .txt1{
+	opacity: 0;
+	-webkit-transition: opacity 0.5s linear 2.25s;
+	-moz-transition: opacity 0.5s linear 2.25s;
+	-ms-transition: opacity 0.5s linear 2.25s;
+	-o-transition: opacity 0.5s linear 2.25s;
+	transition: opacity 0.5s linear 2.25s;
+}
+.banner .cur .txt2,.banner .swiper-slide-active .txt2{
+	opacity: 1;
+	-webkit-transition: opacity 0.5s linear 2.25s;
+	-moz-transition: opacity 0.5s linear 2.25s;
+	-ms-transition: opacity 0.5s linear 2.25s;
+	-o-transition: opacity 0.5s linear 2.25s;
+	transition: opacity 0.5s linear 2.25s;
+}
+.banner .txt1 img,.banner .txt2 img{
+	display: inline-block!important;
+	width: auto!important;
+	height: auto!important;
+	margin: 0!important;
+	vertical-align: middle;
+	max-width: 100%;
+}
+
+.wrap{ position:absolute; top:72%; left:0; width:100%; height:28%; }
+.wrap ul{ position:absolute; top:8px; left:4px; bottom:8px; right:4px; overflow:hidden; }
+.wrap ul li{ position:relative; float:left; width:20%; height:100%; *width:24.98%; }
+.wrap ul li a{ display:block; position:relative; margin:0 4px; height:100%; overflow:hidden; background:#fff; }
+.wrap ul li a .maskw{ opacity:0; filter:alpha(opacity=0); position:absolute; top:0; left:0; width:100%; height:100%; background:#000;}
+.wrap ul li a .text{ position:absolute; bottom:1%; left:0%; right:0%; text-align:center; z-index:10; }
+.wrap ul li a .text h3{ margin-bottom:2px; font-size:18px; font-weight:500; color:#000; width:100%; }
+.wrap ul li a .text h3 span{ display:inline-block; padding:0 5px; color:#fff; background:rgba(0,0,0,0.5); width:100%; }
+.wrap ul li a .text em{ display:block; margin-bottom:12px; width:26px; height:1px; background:#d09400; }
+.wrap ul li a .text p{ color:#000; line-height:20px; font-family:"宋体"; }
+.wrap ul li a img{ position:relative; -webkit-transition:-webkit-transform 1.2s ease 0.1s; transition:transform 1.2s ease 0.1s; }
+.wrap ul li a.hover img{ -webkit-transform:scale(1.05); transform:scale(1.05); }
+
+
+@media screen and (max-width:1440px) {
+	
+}
+@media screen and (max-width:800px) {
+	.main{ position:static; padding-top:44px; }
+	.banner,.wrap,.footer{ position:static; height:auto; }
+	.banner .imgs{ display:none; }
+	.wrap ul{ position:static; top:auto; left:auto; bottom:auto; right:auto; padding:8px; }
+	.wrap ul li{ margin-bottom:8px; width:100%; }
+	.wrap ul li a{ margin:0; }
+	.wrap ul li a img{ margin:0 !important; width:100% !important; height:auto !important; }
+	.wrap ul li a .text p{ font-size:14px; }
+.banner .codema {display:none;}
+}
+@media screen and (max-width:768px) {
+.banner .mcodema {display:block;position: absolute; z-index: 87;left:81%;margin-top: 102px;text-align: right;}
+
+}
+
+@media screen and (max-width:510px) {
+.swiper-wrapper .swiper-slide .text span{ display:block; }
+
+}

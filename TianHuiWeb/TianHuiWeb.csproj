@@ -208,6 +208,111 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\static\css\default.css" />
+    <Content Include="assets\static\css\idangerous.swiper.css" />
+    <Content Include="assets\static\css\index.css" />
+    <Content Include="assets\static\css\master.css" />
+    <Content Include="assets\static\css\swiper-3.3.1.min.css" />
+    <Content Include="assets\static\css\zi.css" />
+    <Content Include="assets\static\images\about\ab_01.jpg" />
+    <Content Include="assets\static\images\about\ab_02.jpg" />
+    <Content Include="assets\static\images\about\banner.jpg" />
+    <Content Include="assets\static\images\about\banner_ry.jpg" />
+    <Content Include="assets\static\images\about\bg.jpg" />
+    <Content Include="assets\static\images\about\foot_bg.png" />
+    <Content Include="assets\static\images\about\fz01.jpg" />
+    <Content Include="assets\static\images\about\fz03.jpg" />
+    <Content Include="assets\static\images\about\fz04.jpg" />
+    <Content Include="assets\static\images\about\fz05.jpg" />
+    <Content Include="assets\static\images\about\fz06.jpg" />
+    <Content Include="assets\static\images\about\fz07.jpg" />
+    <Content Include="assets\static\images\about\fz09.jpg" />
+    <Content Include="assets\static\images\about\fz0aa.jpg" />
+    <Content Include="assets\static\images\about\fz10.jpg" />
+    <Content Include="assets\static\images\about\fz11.jpg" />
+    <Content Include="assets\static\images\about\mid_bg.png" />
+    <Content Include="assets\static\images\about\movie.mp4" />
+    <Content Include="assets\static\images\about\next.png" />
+    <Content Include="assets\static\images\about\prev.png" />
+    <Content Include="assets\static\images\about\title.png" />
+    <Content Include="assets\static\images\about\title_ry.png" />
+    <Content Include="assets\static\images\about\top_bg.png" />
+    <Content Include="assets\static\images\about\video.png" />
+    <Content Include="assets\static\images\arrow.png" />
+    <Content Include="assets\static\images\arrow3.png" />
+    <Content Include="assets\static\images\arrow4.png" />
+    <Content Include="assets\static\images\back.png" />
+    <Content Include="assets\static\images\case\banner-case %281%29.jpg" />
+    <Content Include="assets\static\images\case\banner-case.jpg" />
+    <Content Include="assets\static\images\case\case-back.png" />
+    <Content Include="assets\static\images\case\casedetail-date.png" />
+    <Content Include="assets\static\images\case\caselist-item-video.png" />
+    <Content Include="assets\static\images\case\index-building-cur.png" />
+    <Content Include="assets\static\images\case\index-building.png" />
+    <Content Include="assets\static\images\case\index-frame-cur.png" />
+    <Content Include="assets\static\images\case\index-frame.png" />
+    <Content Include="assets\static\images\case\index-img1.jpg" />
+    <Content Include="assets\static\images\case\index-media-cur.png" />
+    <Content Include="assets\static\images\case\index-media.png" />
+    <Content Include="assets\static\images\case\index-ward-cur.png" />
+    <Content Include="assets\static\images\case\index-ward.png" />
+    <Content Include="assets\static\images\case\mask-arrow.png" />
+    <Content Include="assets\static\images\code.png" />
+    <Content Include="assets\static\images\contact\banner.jpg" />
+    <Content Include="assets\static\images\d.png" />
+    <Content Include="assets\static\images\icon\icon1.jpg" />
+    <Content Include="assets\static\images\icon\icon2.jpg" />
+    <Content Include="assets\static\images\icon_subMenu.png" />
+    <Content Include="assets\static\images\index\01.jpg" />
+    <Content Include="assets\static\images\index\02.jpg" />
+    <Content Include="assets\static\images\index\03.jpg" />
+    <Content Include="assets\static\images\index\04.jpg" />
+    <Content Include="assets\static\images\index\bannera1.jpg" />
+    <Content Include="assets\static\images\index\bannera1m.jpg" />
+    <Content Include="assets\static\images\index\bannerb1.jpg" />
+    <Content Include="assets\static\images\index\bannerb1m.jpg" />
+    <Content Include="assets\static\images\index\bannerc1.jpg" />
+    <Content Include="assets\static\images\index\bannerc1m.jpg" />
+    <Content Include="assets\static\images\index\bannerd1.jpg" />
+    <Content Include="assets\static\images\index\bannerd1m.jpg" />
+    <Content Include="assets\static\images\join\banner.jpg" />
+    <Content Include="assets\static\images\join\icon1.png" />
+    <Content Include="assets\static\images\join\icon2.png" />
+    <Content Include="assets\static\images\join\icon3.png" />
+    <Content Include="assets\static\images\join\icon4.png" />
+    <Content Include="assets\static\images\logo.png" />
+    <Content Include="assets\static\images\next.png" />
+    <Content Include="assets\static\images\prev.png" />
+    <Content Include="assets\static\images\product\bg-foot1.jpg" />
+    <Content Include="assets\static\images\product\bg-foot2.jpg" />
+    <Content Include="assets\static\images\product\bg-foot3.jpg" />
+    <Content Include="assets\static\images\product\bg-foot4.jpg" />
+    <Content Include="assets\static\images\product\bg-foot5.jpg" />
+    <Content Include="assets\static\images\product\icon-foot-case.png" />
+    <Content Include="assets\static\images\product\js01.jpg" />
+    <Content Include="assets\static\images\product\js02.jpg" />
+    <Content Include="assets\static\images\product\js03.jpg" />
+    <Content Include="assets\static\images\product\mc01.jpg" />
+    <Content Include="assets\static\images\product\mc02.jpg" />
+    <Content Include="assets\static\images\product\mc03.jpg" />
+    <Content Include="assets\static\images\round.png" />
+    <Content Include="assets\static\images\s-master.png" />
+    <Content Include="assets\static\images\wb.png" />
+    <Content Include="assets\static\images\wb_2.png" />
+    <Content Include="assets\static\images\wx.png" />
+    <Content Include="assets\static\images\wx_2.png" />
+    <Content Include="assets\static\js\easing.js" />
+    <Content Include="assets\static\js\fun.js" />
+    <Content Include="assets\static\js\html5shiv.min.js" />
+    <Content Include="assets\static\js\idangerous.swiper.min.js" />
+    <Content Include="assets\static\js\iscroll.js" />
+    <Content Include="assets\static\js\jquery-1.11.1.min.js" />
+    <Content Include="assets\static\js\respond.min.js" />
+    <Content Include="assets\static\js\respond.src.js" />
+    <Content Include="assets\static\js\swiper-3.3.1.min.js" />
+    <Content Include="assets\static\video\20.mp4" />
+    <Content Include="assets\static\video\movie.mp4" />
+    <Content Include="assets\static\video\videofs.jpg" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
@@ -267,6 +372,8 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Shared\Foot.cshtml" />
+    <Content Include="Views\Home\HomePartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -280,6 +387,10 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BLL\TianHuiWeb.BLL.csproj">
+      <Project>{A809FDB9-ED42-4C1E-BC83-822EE73D96C3}</Project>
+      <Name>TianHuiWeb.BLL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Common\Fgly.Common.csproj">
       <Project>{10929F82-1575-4C23-A00A-2FDA5A7654AB}</Project>
       <Name>Fgly.Common</Name>
