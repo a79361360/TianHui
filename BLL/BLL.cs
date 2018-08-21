@@ -19,7 +19,7 @@ namespace TianHuiWeb.CBLL
         /// <param name="chanerlid"></param>
         /// <returns></returns>
         public DataTable FindChanel(int ChannelId) {
-            sql = "SELECT ChannelName,Id,ImageUrl,FilePath FROM siteserver_Channel WHERE Id=" + ChannelId + " ORDER BY Id";
+            sql = "SELECT ChannelName,Id,ImageUrl,FilePath,Content FROM siteserver_Channel WHERE Id=" + ChannelId + " ORDER BY Id";
             var dt = dal.ExtSql(sql);
             dt = FilterFilePath(dt);
             return dt;

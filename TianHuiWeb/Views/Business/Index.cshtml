@@ -1,0 +1,59 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta name="format-detection" content="telephone=no">
+    <title>楼宇电视</title>
+    <link rel="stylesheet" href="../assets/static/css/default.css">
+    <script src="../assets/static/js/jquery-1.11.1.min.js"></script>
+    <script src="../assets/static/js/fun.js"></script>
+    <link rel="stylesheet" href="../assets/static/css/master.css">
+</head>
+<body>
+    <!-- top start -->
+    @Html.Action("HomePartial", "Home", new { chanelid = 49 })
+    <!-- end top -->
+    <div class="fixedbar">
+        <ul>
+            <li class="cur"><a href="/business" title="公交广告">公交广告</a></li>
+            <li><a href="/elevator" title="灯箱广告">灯箱广告</a></li>
+            <li><a href="/screen" title="活动推广">活动推广</a></li>
+            <li><a href="/store" title="户外大牌">户外大牌</a></li>
+        </ul>
+    </div>
+
+    <a id="subMenu-tit" href="javascript:;">天汇公交广告</a>
+
+    <div class="fixedbarss">
+        <a href="javascript:;" class="close"><span class="s1"></span><span class="s2"></span></a>
+        <ul>
+            <li><a href="/business">天汇公交广告</a></li>
+            <li><a href="/elevator">天汇灯箱广告</a></li>
+            <li><a href="/screen">天汇活动推广</a></li>
+            <li><a href="/store">天汇户外大牌</a></li>
+            <li><a href="/store">天汇视频机</a></li>
+        </ul>
+    </div>
+    <div class="product-index">
+        @Html.Raw(ViewBag.banner)
+        <div class="product-module product-module1">
+            <div class="wrap">
+                @Html.Raw(ViewBag.title)
+                @Html.Raw(ViewBag.Content)
+            </div>
+        </div>
+        <br />
+    </div>
+    <!-- foot start -->
+    @Html.Partial("~/Views/Shared/Foot.cshtml")
+    <!-- end foot -->
+</body>
+</html>
