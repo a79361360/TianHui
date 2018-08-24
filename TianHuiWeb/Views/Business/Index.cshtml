@@ -19,27 +19,30 @@
 </head>
 <body>
     <!-- top start -->
-    @Html.Action("HomePartial", "Home", new { chanelid = 49 })
+    @Html.Action("HomePartial", "Home", new { chanelid = 3 })
     <!-- end top -->
     <div class="fixedbar">
         <ul>
-            <li class="cur"><a href="/business" title="公交广告">公交广告</a></li>
+            @Html.Raw(ViewBag.QuickNav1)
+            @*<li class="cur"><a href="/business" title="公交广告">公交广告</a></li>
             <li><a href="/elevator" title="灯箱广告">灯箱广告</a></li>
             <li><a href="/screen" title="活动推广">活动推广</a></li>
             <li><a href="/store" title="户外大牌">户外大牌</a></li>
+            <li><a href="/store" title="户外大牌">户外大牌</a></li>*@
         </ul>
     </div>
 
-    <a id="subMenu-tit" href="javascript:;">天汇公交广告</a>
-
+    @Html.Raw(ViewBag.QuickNav2)
+    
     <div class="fixedbarss">
         <a href="javascript:;" class="close"><span class="s1"></span><span class="s2"></span></a>
         <ul>
-            <li><a href="/business">天汇公交广告</a></li>
+            @Html.Raw(ViewBag.QuickNav3)
+            @*<li><a href="/business">天汇公交广告</a></li>
             <li><a href="/elevator">天汇灯箱广告</a></li>
             <li><a href="/screen">天汇活动推广</a></li>
             <li><a href="/store">天汇户外大牌</a></li>
-            <li><a href="/store">天汇视频机</a></li>
+            <li><a href="/store">天汇视频机</a></li>*@
         </ul>
     </div>
     <div class="product-index">

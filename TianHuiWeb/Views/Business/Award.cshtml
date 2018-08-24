@@ -1,0 +1,52 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta name="format-detection" content="telephone=no">
+    <title>获奖案例</title>
+    <link rel="stylesheet" href="../assets/static/css/default.css?v=142">
+    <script src="../assets/static/js/jquery-1.11.1.min.js"></script>
+    <script src="../assets/static/js/fun.js?v=141"></script>
+    <link rel="stylesheet" href="../assets/static/css/master.css">
+    <link rel="stylesheet" href="../assets/static/js/respond.src.js">
+</head>
+<body class="case-page">
+    <!-- top start -->
+    @Html.Action("HomePartial", "Home", new { chanelid = 9 })
+    <!-- end top -->
+    <div class="fixedbar">
+        <ul>
+            @Html.Raw(ViewBag.QuickNav1)
+        </ul>
+    </div>
+    <div class="container caselist">
+        @Html.Raw(ViewBag.banner)
+        <div class="all">
+            <div class="caselist-title">@ViewBag.ChannelName<i></i></div>
+            <div class="caselist-list J-caselist">
+                <div class="list-cont">
+                    <div class="cont-list">
+                        <div class="cont-item cur J-caselist-cont">
+                            <div class="cont-title-m fn-clear">@ViewBag.ChannelName<span class="cont-title-total">共计<span>@ViewBag.ContentNum</span>个</span></div>
+                            <ul class="fn-clear">
+                                @Html.Raw(ViewBag.Content)
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- foot start -->
+    @Html.Partial("~/Views/Shared/Foot.cshtml")
+    <!-- end foot -->
+</body>
+</html>

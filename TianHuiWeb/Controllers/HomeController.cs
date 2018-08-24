@@ -26,11 +26,11 @@ namespace TianHuiWeb.Controllers
             if (dt.Rows.Count > 0) {
                 foreach (DataRow dr in dt.Rows) {
                     if (dr["Id"].ToString() == channelid.ToString())
-                        ll += "<li class=\"cur\"><a href=\"/\">" + dr["ChannelName"].ToString() + "</a>";
+                        ll += "<li class=\"cur\"><a href=\"" + dr["FilePath"].ToString() + "\">" + dr["ChannelName"].ToString() + "</a>";
                     else
                         ll += "<li><a href=\"" + dr["FilePath"].ToString() + "\" target=\"_self\">" + dr["ChannelName"].ToString() + "</a>";
-                    if (dr["Id"].ToString() == "50") {
-                        var dt_1 = bll.FindChanelByParentId(50);
+                    if (dr["Id"].ToString() == "3") {
+                        var dt_1 = bll.FindChanelByParentId(3);
                         if (dt_1.Rows.Count > 0) {
                             ll1 += "<dl>";
                             foreach (DataRow dr_1 in dt_1.Rows)
@@ -67,7 +67,7 @@ namespace TianHuiWeb.Controllers
         /// </summary>
         private void Home3() {
             string ll = "";
-            var dt = bll.FindChanelByParentId(50);
+            var dt = bll.FindChanelByParentId(3);
             if (dt.Rows.Count > 0) {
                 foreach (DataRow dr in dt.Rows) {
                     ll += "<li><a href=\"/business\"><img src=\"" + dr["ImageUrl"].ToString() + "\" width=\"468\" height=\"226\" alt=\"\"><div class=\"maskw\"></div><div class=\"text\"><h3><span>" + dr["ChannelName"].ToString() + "</span></h3></div></a></li>";
@@ -100,7 +100,7 @@ namespace TianHuiWeb.Controllers
 
         public ActionResult About()
         {
-            var dt = bll.FindContentByChannelId(49);
+            var dt = bll.FindContentByChannelId(2);
             if (dt.Rows.Count > 0) {
                 DataRow dr = dt.Rows[0];
                 ViewBag.banner = "<div class=\"img\"><img src=\"" + dr["ImageUrl"].ToString() + "\" alt=\"\"></div><div class=\"cont\"><div class=\"title\">" + dr["Title"].ToString() + "</div></div>";

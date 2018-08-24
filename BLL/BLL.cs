@@ -19,7 +19,7 @@ namespace TianHuiWeb.CBLL
         /// <param name="chanerlid"></param>
         /// <returns></returns>
         public DataTable FindChanel(int ChannelId) {
-            sql = "SELECT ChannelName,Id,ImageUrl,FilePath,Content FROM siteserver_Channel WHERE Id=" + ChannelId + " ORDER BY Id";
+            sql = "SELECT ChannelName,Id,ImageUrl,FilePath,Content,ContentNum FROM siteserver_Channel WHERE Id=" + ChannelId + " ORDER BY Id";
             var dt = dal.ExtSql(sql);
             dt = FilterFilePath(dt);
             return dt;
@@ -52,7 +52,29 @@ namespace TianHuiWeb.CBLL
         /// <param name="ChannelId"></param>
         /// <returns></returns>
         public DataTable FindContentByChannelId(int ChannelId) {
-            sql = "SELECT Title,ImageUrl,Content FROM model_Content WHERE ChannelId=" + ChannelId+ " AND IsChecked='True'";
+            sql = "SELECT Id,Title,SubTitle,ImageUrl,Content,CONVERT(VARCHAR(19),LastEditDate,120) LastEditDate FROM model_Content WHERE ChannelId=" + ChannelId+ " AND IsChecked='True'";
+            var dt = dal.ExtSql(sql);
+            dt = FilterFilePath(dt);
+            return dt;
+        }
+        /// <summary>
+        /// 根据ID查询内容
+        /// </summary>
+        /// <param name="ChannelId"></param>
+        /// <returns></returns>
+        public DataTable FindContentById(int id)
+        {
+            sql = "SELECT Title,SubTitle,ImageUrl,Content,CONVERT(VARCHAR(19),LastEditDate,120) LastEditDate FROM model_Content WHERE Id=" + id + " AND IsChecked='True'";
+            var dt = dal.ExtSql(sql);
+            dt = FilterFilePath(dt);
+            return dt;
+        }
+        /// <summary>
+        /// 取得产品服务与内容的前10条
+        /// </summary>
+        /// <returns></returns>
+        public DataTable FindContentTop() {
+            sql = "SELECT TOP 10 Id,Title,SubTitle,ImageUrl,Content FROM dbo.model_Content WHERE ChannelId IN(SELECT ID FROM siteserver_Channel WHERE ParentId=3)";
             var dt = dal.ExtSql(sql);
             dt = FilterFilePath(dt);
             return dt;

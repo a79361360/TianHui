@@ -376,6 +376,9 @@
     <Content Include="Views\Shared\Foot.cshtml" />
     <Content Include="Views\Home\HomePartial.cshtml" />
     <Content Include="Views\Business\Index.cshtml" />
+    <Content Include="Views\Business\Cases.cshtml" />
+    <Content Include="Views\Business\CaseDetail.cshtml" />
+    <Content Include="Views\Business\Award.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
