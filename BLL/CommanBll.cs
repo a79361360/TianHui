@@ -8,6 +8,6 @@ namespace TianHuiWeb.CCommanBll
 {
     public class CommanBll
     {
-        public static string WebSite = "http://192.168.1.164:8087";
+        public static string WebSite = "http://admintianhui.cf518.cn";
     }
 }

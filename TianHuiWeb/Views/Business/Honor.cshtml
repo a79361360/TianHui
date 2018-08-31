@@ -1,15 +1,17 @@
-﻿@{
-    
+﻿
+@{
+    Layout = null;
 }
 
 <!DOCTYPE html>
-<html lang="zh-CN">
+
+<html>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
     <meta name="format-detection" content="telephone=no">
-    <title>联系我们</title>
+    <title>天汇荣誉</title>
     <link rel="stylesheet" href="../assets/static/css/default.css?v=142">
     <script src="../assets/static/js/jquery-1.11.1.min.js"></script>
     <script src="../assets/static/js/fun.js?v=141"></script>
@@ -17,28 +19,27 @@
 </head>
 <body>
     <!-- top start -->
-    @Html.Action("HomePartial", "Home", new { chanelid = 12 })
+    @Html.Action("HomePartial", "Home", new { chanelid = 10 })
     <!-- end top -->
     <div class="container">
         <div class="banner">
-            @Html.Raw(ViewBag.banner)
+            <div class="banner">
+                @Html.Raw(ViewBag.banner)
+            </div>
         </div>
-        <div class="contacts">
-            <div class="all">
-                <div class="citybox">
-                    <h3>@ViewBag.title</h3>
-                    <div class="cont clearboth">
-                        <div>
-                            <div class="box2">
+        <div class="honor">
+            <div class="all main">
+                @*<div class="title">@Html.Raw(ViewBag.title)</div><br />*@
+                <div class="cont">
+                    <div class="honorBox">
+                        @*<div class="prev"></div>
+                        <div class="next"></div>*@
+                        <div class="honorBoxCont">
+                            <div class="box">
                                 @Html.Raw(ViewBag.Content)
                             </div>
                         </div>
-
-                        <div>
-                            <div class="box">
-                                <iframe width="555" height="355" src="~/Content/BaiduPlaceSite.html" style="border:0"></iframe>
-                            </div>
-                        </div>
+                        <div class="honorBoxbtm"></div>
                     </div>
                 </div>
             </div>

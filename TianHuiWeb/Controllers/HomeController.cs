@@ -112,7 +112,14 @@ namespace TianHuiWeb.Controllers
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            var dt = bll.FindContentByChannelId(12);
+            if (dt.Rows.Count > 0)
+            {
+                DataRow dr = dt.Rows[0];
+                ViewBag.banner = "<div class=\"img\"><img src=\"" + dr["ImageUrl"].ToString() + "\" alt=\"\"></div><div class=\"cont\"><div class=\"title\">" + dr["Title"].ToString() + "</div><div class=\"text\">" + dr["SubTitle"].ToString() + "</div></div>";
+                ViewBag.title = dr["Title"].ToString();
+                ViewBag.Content = dr["Content"].ToString();
+            }
 
             return View();
         }

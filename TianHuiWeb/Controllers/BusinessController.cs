@@ -184,6 +184,26 @@ namespace TianHuiWeb.Controllers
         /// </summary>
         /// <returns></returns>
         public ActionResult Honor() {
+            var dt = bll.FindContentByChannelId(10);
+            if (dt.Rows.Count > 0)
+            {
+                DataRow dr = dt.Rows[0];
+                ViewBag.banner = "<div class=\"img\"><img src=\"" + dr["ImageUrl"].ToString() + "\" alt=\"\"></div><div class=\"cont\"><div class=\"title\">" + dr["Title"].ToString() + "</div></div>";
+                ViewBag.title = "<div class=\"title\">" + dr["Title"].ToString() + "</div><br />";
+                ViewBag.Content = dr["Content"].ToString();
+            }
+            return View();
+        }
+
+        public ActionResult JoinIn() {
+            var dt = bll.FindContentByChannelId(11);
+            if (dt.Rows.Count > 0)
+            {
+                DataRow dr = dt.Rows[0];
+                ViewBag.banner = "<div class=\"img\"><img src=\"" + dr["ImageUrl"].ToString() + "\" alt=\"\"></div><div class=\"cont\"><div class=\"title\">" + dr["Title"].ToString() + "</div></div>";
+                ViewBag.title = "<div class=\"title\">" + dr["Title"].ToString() + "</div><br />";
+                ViewBag.Content = dr["Content"].ToString();
+            }
             return View();
         }
     }
